@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- Before Suite -->
+<suite name ="Salesforce">
+
+<!--beforeTest-->
+
+
+<!-- groups>
+  <run>
+     <exclude name ="smoke"/>
+  </run>
+</groups -->
+
+<parameter name="browser" value="firefox"></parameter>
+
+<listeners>
+    <listener class-name = "com.salesforce.listerners.TestListener"></listener>
+</listeners>
+
+
+<test name="Login">
+	<classes>
+	<class name = "com.salesforce.testcases.LoginTestcases"/>
+	</classes>
+</test>
+
+
+</suite>
+<!-- AfterSuite -->
